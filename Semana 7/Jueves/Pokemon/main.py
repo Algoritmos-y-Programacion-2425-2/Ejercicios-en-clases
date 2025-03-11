@@ -15,7 +15,9 @@ def make_request(url):
         payload = response.json()
         for pokemon_dict in payload.get("results"):
             print(pokemon_dict.get("name"))
-             
+    
+        #TODO
+        
         if payload.get("previous") == None:
             option = input("1. Next\n2. Exit\n")
             if option == "1":
