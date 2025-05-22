@@ -4,13 +4,13 @@ def main():
     print(lista)
 
 def selection(lista):
-    for i in range(len(lista)):
-        minor_index = i
-        for j in range(i+1, len(lista)):
-            if lista[j] < lista[minor_index]:
-                minor_index = j
-        temp = lista[i]
-        lista[i] = lista[minor_index]
-        lista[minor_index] = temp
-
+    for i in range(len(lista)): #n
+        minor_index = i #n
+        for j in range(i+1, len(lista)): #n2
+            if lista[j] < lista[minor_index]: #n2
+                minor_index = j #n2
+        temp = lista[i] #n
+        lista[i] = lista[minor_index] #n
+        lista[minor_index] = temp #n
+        #3n2 + 5n
 main()
